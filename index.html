@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Teacher's Compass</title>
+<meta name="description" content="Free English teaching materials for Moroccan high schools: lesson plans, worksheets, exit tickets, warm-ups, review games, assessments and remedial work.">
+<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<!--SITE-START-->
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Shared SVG symbols: logo and the zellige star -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="logo" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="30" fill="none" stroke="currentColor" stroke-width="3"/>
+      <rect x="14" y="14" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2.4"/>
+      <rect x="14" y="14" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2.4" transform="rotate(45 32 32)"/>
+      <polygon points="32,9 37.5,32 26.5,32" class="needle-n"/>
+      <polygon points="32,55 37.5,32 26.5,32" fill="currentColor"/>
+      <circle cx="32" cy="32" r="3" class="needle-pin"/>
+    </symbol>
+    <pattern id="zellige" width="60" height="60" patternUnits="userSpaceOnUse">
+      <g fill="none" stroke="currentColor" stroke-width="1.4">
+        <rect x="18" y="18" width="24" height="24"/>
+        <rect x="18" y="18" width="24" height="24" transform="rotate(45 30 30)"/>
+        <path d="M0 0 L13 13 M60 0 L47 13 M0 60 L13 47 M60 60 L47 47"/>
+        <path d="M30 0 v6 M30 54 v6 M0 30 h6 M54 30 h6"/>
+      </g>
+    </pattern>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="#home" aria-label="Teacher's Compass home">
+      <svg class="brand-mark" aria-hidden="true"><use href="#logo"/></svg>
+      <span class="brand-name">Teacher's <b>Compass</b></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" class="nav" aria-label="Main">
+      <a href="#teachers" data-nav="teachers">Teachers</a>
+      <a href="#applicants" data-nav="applicants">Teaching Applicants</a>
+      <a href="#crmef" data-nav="crmef">CRMEF Trainees</a>
+      <a href="#audio" data-nav="audio">Audio</a>
+      <a href="#forum" data-nav="forum">Forum</a>
+      <a href="#howto" data-nav="howto">How-To</a>
+      <a href="#contact" data-nav="contact" class="nav-contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============================ HOME ============================ -->
+  <section class="page" data-page="home">
+    <div class="banner">
+      <svg class="banner-pattern" aria-hidden="true"><rect width="100%" height="100%" fill="url(#zellige)"/></svg>
+      <div class="wrap banner-inner">
+        <div class="banner-text">
+          <p class="eyebrow">English for Moroccan high schools</p>
+          <h1>Find your way through the English curriculum.</h1>
+          <p class="lede">Lesson plans, worksheets, exit tickets, warm-ups, review games, assessments and remedial work for Common Core, 1BAC and 2BAC. Free to download, free to adapt.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#teachers">Browse the teachers' library</a>
+            <a class="btn btn-ghost" href="#howto">How to use the materials</a>
+          </div>
+        </div>
+        <svg class="banner-logo" aria-hidden="true"><use href="#logo"/></svg>
+      </div>
+    </div>
+
+    <div class="wrap section">
+      <h2 class="section-title">Choose your path</h2>
+      <div class="paths">
+        <a class="path path-main" href="#teachers">
+          <span class="path-tag">For teachers</span>
+          <h3>Teachers</h3>
+          <p>The full library, organised by level, textbook and type of material. Everything is editable, so you can make it fit your class.</p>
+          <ul class="path-list" id="homeTypes"></ul>
+          <span class="path-go">Open the library</span>
+        </a>
+        <a class="path path-applicants" href="#applicants">
+          <span class="path-tag">Preparing for the exam</span>
+          <h3>Teaching Applicants</h3>
+          <p>Written exam and interview preparation, teaching approaches, model lessons and a full lesson simulation on video.</p>
+          <span class="path-go">Start preparing</span>
+        </a>
+        <a class="path path-crmef" href="#crmef">
+          <span class="path-tag">In training</span>
+          <h3>CRMEF Trainees</h3>
+          <p>Practicum guides, observation grids, planning templates, portfolio help and action research.</p>
+          <span class="path-go">Open trainee resources</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="wrap section">
+      <div class="section-head">
+        <h2 class="section-title">Recently added</h2>
+        <a class="link-arrow" href="#teachers">See all materials</a>
+      </div>
+      <div class="material-list" id="homeRecent"></div>
+    </div>
+
+    <div class="wrap section shelf-section">
+      <h2 class="section-title">Textbooks covered</h2>
+      <div class="shelf" id="homeShelf"></div>
+    </div>
+  </section>
+
+  <!-- ============================ TEACHERS ============================ -->
+  <section class="page" data-page="teachers" hidden>
+    <div class="page-head head-teachers">
+      <div class="wrap">
+        <p class="eyebrow">Main library</p>
+        <h1>Teachers</h1>
+        <p class="lede">Filter by level, textbook or type. Every file opens in Google Drive, where you can download it or make your own copy.</p>
+        <div class="cta-row"><a class="btn btn-light" data-drive="teachers" href="#">Open the full Drive folder</a></div>
+      </div>
+    </div>
+    <div class="wrap section">
+      <div class="filters" role="search">
+        <label class="field field-search">
+          <span>Search</span>
+          <input id="fSearch" type="search" placeholder="Unit, grammar point, topic...">
+        </label>
+        <label class="field">
+          <span>Level</span>
+          <select id="fLevel"><option value="">All levels</option></select>
+        </label>
+        <label class="field">
+          <span>Textbook</span>
+          <select id="fBook"><option value="">All textbooks</option></select>
+        </label>
+      </div>
+      <div class="chips" id="fTypes" role="group" aria-label="Type of material"></div>
+      <p class="result-count" id="fCount" aria-live="polite"></p>
+      <div class="material-list" id="materialList"></div>
+      <div class="comments-block" data-comments="teachers"></div>
+    </div>
+  </section>
+
+  <!-- ============================ APPLICANTS ============================ -->
+  <section class="page" data-page="applicants" hidden>
+    <div class="page-head head-applicants">
+      <div class="wrap">
+        <p class="eyebrow">Teaching Well</p>
+        <h1>Teaching Applicants</h1>
+        <p class="lede">Everything you need to prepare for the recruitment exam and the interview, in one place.</p>
+        <div class="cta-row"><a class="btn btn-light" data-drive="applicants" href="#">Open the Teaching Well Drive</a></div>
+      </div>
+    </div>
+    <div class="wrap section">
+      <div class="video-block">
+        <div class="video-frame" id="videoFrame"></div>
+        <div class="video-text">
+          <p class="eyebrow">Lesson simulation</p>
+          <h2 id="videoTitle"></h2>
+          <p id="videoNote"></p>
+        </div>
+      </div>
+      <h2 class="section-title">Resources</h2>
+      <div class="resource-grid" id="applicantsList"></div>
+      <div class="comments-block" data-comments="applicants"></div>
+    </div>
+  </section>
+
+  <!-- ============================ CRMEF ============================ -->
+  <section class="page" data-page="crmef" hidden>
+    <div class="page-head head-crmef">
+      <div class="wrap">
+        <p class="eyebrow">Regional training centres</p>
+        <h1>CRMEF Trainees</h1>
+        <p class="lede">Support for the training year: school visits, planning, your portfolio and your research project.</p>
+        <div class="cta-row"><a class="btn btn-light" data-drive="crmef" href="#">Open the CRMEF Drive</a></div>
+      </div>
+    </div>
+    <div class="wrap section">
+      <div class="resource-grid" id="crmefList"></div>
+      <div class="comments-block" data-comments="crmef"></div>
+    </div>
+  </section>
+
+  <!-- ============================ AUDIO ============================ -->
+  <section class="page" data-page="audio" hidden>
+    <div class="page-head head-audio">
+      <div class="wrap">
+        <p class="eyebrow">Listening</p>
+        <h1>Audio tracks</h1>
+        <p class="lede">Listening tracks for the textbooks, ready to play in class.</p>
+      </div>
+    </div>
+    <div class="wrap section">
+      <div class="audio-list" id="audioList"></div>
+    </div>
+  </section>
+
+  <!-- ============================ FORUM ============================ -->
+  <section class="page" data-page="forum" hidden>
+    <div class="page-head head-forum">
+      <div class="wrap">
+        <p class="eyebrow">Teachers sharing with teachers</p>
+        <h1>Forum</h1>
+        <p class="lede">Share your own materials with colleagues. Every post is reviewed before it appears here.</p>
+      </div>
+    </div>
+    <div class="wrap section forum-layout">
+      <div class="forum-posts">
+        <h2 class="section-title">Shared by teachers</h2>
+        <div id="forumList" class="forum-list"></div>
+      </div>
+      <aside class="panel">
+        <h2 class="panel-title">Share a resource</h2>
+        <ol class="mini-steps">
+          <li>Upload your file to your own Google Drive.</li>
+          <li>Set sharing to "Anyone with the link can view".</li>
+          <li>Paste the link below and send.</li>
+        </ol>
+        <form id="forumForm" class="form" novalidate>
+          <label class="field"><span>Title</span><input id="ffTitle" name="title" required></label>
+          <div class="field-row">
+            <label class="field"><span>Level</span><select id="ffLevel" name="level"></select></label>
+            <label class="field"><span>Type</span><select id="ffType" name="type"></select></label>
+          </div>
+          <label class="field"><span>Drive link to the file</span><input id="ffLink" name="link" type="url" placeholder="https://drive.google.com/..." required></label>
+          <label class="field"><span>Show my post as (optional)</span><input id="ffFrom" name="from" placeholder="e.g. A teacher in Meknes"></label>
+          <button class="btn btn-primary" type="submit">Send for review</button>
+          <p class="form-msg" id="forumMsg" role="status"></p>
+        </form>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============================ HOW-TO ============================ -->
+  <section class="page" data-page="howto" hidden>
+    <div class="page-head head-howto">
+      <div class="wrap">
+        <p class="eyebrow">Short guides</p>
+        <h1>How-To</h1>
+        <p class="lede">Four quick guides to get the most out of the materials.</p>
+      </div>
+    </div>
+    <div class="wrap section howto-grid">
+      <article class="guide" id="make-it-your-own">
+        <h2>Make it your own</h2>
+        <p>Every file is editable. Change the names, the examples, the timings and the level so it fits your learners.</p>
+        <ol>
+          <li>Open the file in Google Drive.</li>
+          <li>Click <b>File</b>, then <b>Make a copy</b>. The copy goes to your own Drive.</li>
+          <li>Edit your copy freely. The original stays untouched for everyone else.</li>
+          <li>To use it in Word, click <b>File</b>, <b>Download</b>, then <b>Microsoft Word (.docx)</b>.</li>
+        </ol>
+      </article>
+      <article class="guide" id="hyperlinks">
+        <h2>How the hyperlinks work</h2>
+        <p>Many documents have a clickable table of contents and links between related materials.</p>
+        <ol>
+          <li>Click a title in the contents page to jump to that lesson.</li>
+          <li>Blue underlined text opens a related file, for example the worksheet that goes with a lesson plan.</li>
+          <li>In a downloaded PDF, links work in most PDF readers. Hold <b>Ctrl</b> while clicking in Word.</li>
+          <li>To come back, use your reader's <b>Back</b> button or <b>Alt + Left arrow</b>.</li>
+        </ol>
+      </article>
+      <article class="guide" id="navigating-drive">
+        <h2>Navigating the Drive</h2>
+        <p>Folders follow the same order everywhere: level, then textbook, then unit, then type of material.</p>
+        <div class="path-crumb" aria-label="Example folder path">
+          <span>2BAC</span><span>Ticket to English 2</span><span>Unit 3</span><span>Worksheets</span>
+        </div>
+        <ol>
+          <li>Use the search bar at the top of Drive and type a unit or a grammar point.</li>
+          <li>Switch to <b>List view</b> to see file names in full.</li>
+          <li>Click the star on a folder you use often to find it later under <b>Starred</b>.</li>
+        </ol>
+      </article>
+      <article class="guide" id="isolating-files">
+        <h2>Isolating files from compilations</h2>
+        <p>Some files are compilations of many lessons. To keep only the pages you need, print them to a new PDF.</p>
+        <ol>
+          <li>Open the PDF and press <b>Ctrl + P</b> (or <b>Cmd + P</b> on a Mac).</li>
+          <li>As the printer, choose <b>Save as PDF</b> or <b>Microsoft Print to PDF</b>.</li>
+          <li>Under <b>Pages</b>, choose <b>Custom</b> and type the range, for example <code>12-15</code>.</li>
+          <li>Click <b>Save</b>. You now have a separate file with just those pages.</li>
+        </ol>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================ CONTACT ============================ -->
+  <section class="page" data-page="contact" hidden>
+    <div class="page-head head-contact">
+      <div class="wrap">
+        <p class="eyebrow">Get in touch</p>
+        <h1>Contact</h1>
+        <p class="lede">Questions, suggestions, or a broken link? Send a message.</p>
+      </div>
+    </div>
+    <div class="wrap section contact-layout">
+      <form id="contactForm" class="form panel" novalidate>
+        <label class="field"><span>Your name (optional)</span><input id="cName" name="name"></label>
+        <label class="field"><span>Your email</span><input id="cEmail" name="email" type="email" required></label>
+        <label class="field"><span>I am a</span>
+          <select id="cRole" name="role">
+            <option>Teacher</option><option>Teaching applicant</option><option>CRMEF trainee</option><option>Other</option>
+          </select>
+        </label>
+        <label class="field"><span>Message</span><textarea id="cMsg" name="message" rows="6" required></textarea></label>
+        <button class="btn btn-primary" type="submit">Send message</button>
+        <p class="form-msg" id="contactMsg" role="status"></p>
+      </form>
+      <div class="contact-side">
+        <h2 class="panel-title">Email</h2>
+        <p class="email-line"><span id="contactEmail"></span> <button class="btn-small" id="copyEmail" type="button">Copy</button></p>
+        <p class="muted">Replies usually come within a few days. For a broken link, please include the name of the file.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <div class="footer-brand">
+      <svg class="brand-mark" aria-hidden="true"><use href="#logo"/></svg>
+      <div>
+        <p class="footer-name">Teacher's Compass</p>
+        <p class="muted">Free English materials for Moroccan high school classrooms.</p>
+      </div>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="#teachers">Teachers</a>
+      <a href="#applicants">Teaching Applicants</a>
+      <a href="#crmef">CRMEF Trainees</a>
+      <a href="#howto">How-To</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+<!--SITE-END-->
+
+<script src="assets/js/content.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
